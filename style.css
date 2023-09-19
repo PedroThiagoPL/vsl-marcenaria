@@ -1,0 +1,458 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    padding: 15px 4%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 25%;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.logo a img {
+    width: 200px;
+}
+
+.menu {
+    width: 60%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.menu nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+    padding-right: 30px;
+    padding-bottom: 8px;
+    position: relative;
+    transition: .2s ease-in-out;
+    text-transform: uppercase;
+}
+
+.menu nav a::after {
+    transition: width 0.5s;
+}
+
+.menu nav a:hover::after {
+    width: 30px;
+}
+
+.menu nav a:hover {
+    color: #ffab14;
+}
+
+.menu nav a:active {
+    color: #ffab14;
+}
+
+.menu nav a:nth-last-of-type(1)::after {
+    width: 30px;
+}
+
+#btn-menu {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.linha {
+    width: 40px;
+    height: 4px;
+    background-color: #ffab14;
+    display: block;
+    margin: 10px auto;
+    position: relative;
+    transform-origin: center;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+button.ativar .linha:nth-child(1) {
+    transform: translateY(13px) rotate(-45deg);
+    background-color: #ff2500;
+}
+
+button.ativar .linha:nth-child(3) {
+    transform: translateY(-13px) rotate(45deg);
+    background-color: #ff2500;
+}
+
+button.ativar .linha:nth-child(2) {
+    width: 0;
+}
+
+/*Estilização do Menu Mobile*/
+
+.menu-mobile {
+    background-color: #00000071;
+    backdrop-filter: blur(10px);
+    /*Efeito de Vidro/Desfoque*/
+    position: absolute;
+    top: 77px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    text-align: center;
+}
+
+.menu-mobile nav a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+    font-size: 20px;
+}
+
+.menu-mobile nav a:hover {
+    background-color: #ffab14;
+}
+
+#btn-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-mobile.abrir {
+        visibility: visible;
+        height: calc(100vh - 77px);
+    }
+
+    #btn-menu {
+        display: block;
+    }
+}
+
+#inicio {
+    height: 70vh;
+    background-image: url(img/01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15%;
+}
+
+.slogan {
+    color: #fff;
+    font-size: 54px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.subtitle {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 5rem;
+}
+
+.seus-planos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.descricao-planos {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.descricao-title {
+    font-size: 17px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 17px;
+    color: #ffab14;
+    text-transform: uppercase;
+}
+
+.descricao-subtitle {
+    font-size: 39px;
+    font-weight: 600;
+    list-style: 44px;
+}
+
+.texto-plano {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #343434;
+}
+
+.img-planos {
+    padding-left: 50px;
+}
+
+.experiencia-img {
+    position: absolute;
+    animation: experiencia 4s infinite alternate;
+}
+
+.trabalho-img {
+    padding-left: 120px;
+}
+
+@keyframes experiencia {
+    0% {
+        transform: translateY(180px);
+    }
+
+    100% {
+        transform: translateY(240px);
+    }
+}
+
+.servicos {
+    height: 100%;
+    width: 100%;
+    background-color: #ffab14;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.servicos h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding-top: 30px;
+}
+
+.container-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    cursor: pointer;
+    transition: all 0.5s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    user-select: none;
+    font-weight: bolder;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.card h4 {
+    font-size: 1.4rem;
+    text-shadow: -1px 3px 2px rgba(0, 0, 0, 1);
+}
+
+.card p {
+    font-size: 1.1rem;
+    padding: 10px;
+    text-shadow: -1px 3px 2px rgba(0, 0, 0, 1);
+}
+
+.card-1 {
+    background-image: url(img/03.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-2 {
+    background-image: url(img/04.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-3 {
+    background-image: url(img/05.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-4 {
+    background-image: url(img/06.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.informacao {
+    height: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    padding: 100px 0; 
+    vertical-align: top;
+}
+
+.container-informacao {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.informacao-number {
+    font-size: 35px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 37px;
+    color: #ffab14;
+}
+
+.informacao-descricao {
+    width: 350px;
+    height: 100%;
+}
+
+.informacao-title {
+    font-size: 23px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 23px;
+}
+
+.informacao-title span {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    padding-left: 3px;
+}
+
+.informacao-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 28px;
+    padding-top: 10px;
+}
+
+.chamada {   
+    height: 30vh;
+    background-image: url(img/07.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.container-chamada {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    padding: 50px;  
+}
+
+.container-chamada div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.container-chamada div img {
+ height: 107px;
+ padding-right: 10px;
+}
+
+.chamada-projeto {    
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 28px;
+}
+
+.chamada-projeto span {
+    font-size: 28px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 34px;
+}
+
+.btn-projeto {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   .btn-projeto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   .btn-projeto:hover::before {
+    width: 100%;
+   }
+   
+   .btn-projeto a {
+     color: #212121;
+     text-decoration: none;
+   }
+   
+   .btn-projeto a:hover {
+    color: #e8e8e8;
+   }
+
+   
