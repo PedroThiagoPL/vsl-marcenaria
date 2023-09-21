@@ -554,3 +554,45 @@ button.ativar .linha:nth-child(2) {
         padding-right: 0px;
     }
   }
+
+  @media (max-width: 500px) {
+    .trabalho-img {
+        width: 350px;
+    }
+
+    .experiencia-img {
+        width: 150px;
+    }
+
+    .informacao {
+        padding: 50px 0;
+    }
+
+    .informacao-descricao {
+        width: 300px;
+    }
+
+    .informacao-number {
+        font-size: 28px;
+    }
+
+    .informacao-title {
+        font-size: 20px;
+    }
+
+    .informacao-title span {
+        font-size: 25px;
+    }
+
+    .informacao-subtitle {
+        font-size: 14px;
+    }
+
+    .container-chamada {
+        flex-wrap: wrap;
+    }
+
+    .container-chamada div {
+        width: 95%;
+    }
+  }
