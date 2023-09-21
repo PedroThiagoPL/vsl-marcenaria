@@ -10,3 +10,10 @@ function animarMenu() {
     openMenu.classList.toggle('abrir')
     btn.classList.toggle('ativar') //Animar o botão mobile fazendo o X ao
 }
+
+//Data atual do footer
+const anoAtual = document.querySelector("#ano")
+const data = new Date()
+const ano = data.getFullYear()
+
+anoAtual.innerHTML = `${ano}`
