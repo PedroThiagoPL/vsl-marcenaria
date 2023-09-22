@@ -13,8 +13,7 @@ body {
 
 header {
     width: 100%;
-    padding: 15px 4%;
-    max-width: 1200px;
+    padding: 15px 4%;    
 }
 
 .container {
@@ -203,7 +202,7 @@ button.ativar .linha:nth-child(2) {
 }
 
 .sobre {
-    max-width: 1200px;
+    width: 100%;
     text-align: center;
     padding: 0 100px;
 }
@@ -224,24 +223,28 @@ button.ativar .linha:nth-child(2) {
 }
 
 .missao {
-    height: 100vh;
+    height: 100%;
     display: flex;
-    justify-content:  space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    gap: 5rem;
 }
 
 .card {
-    width: 300px;
+    width: 350px;
     height: 520px;
     display: flex;
     flex-direction: column;
     flex-direction: center;
     align-items: center;
+    flex-wrap: wrap;
     background-color: #F2F2F2;
 }
 
 .missao div img {
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    height: 250px;
 }
 
 .missao div .title-card {
@@ -256,3 +259,201 @@ button.ativar .linha:nth-child(2) {
     font-weight: 400;
     line-height: 27px;
 }
+
+.chamada {   
+    height: 35vh;
+    width: 100%;
+    background-image: url(../img/07.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.container-chamada {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    
+}
+
+.container-chamada div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.container-chamada div img {
+ height: 100px;
+ padding-right: 10px;
+}
+
+.chamada-projeto {    
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 28px;
+}
+
+.chamada-projeto span {
+    font-size: 28px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 34px;
+}
+
+.btn-projeto {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #ffab14;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #ffab14;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+  
+  .btn-projeto:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #ffab14;
+    z-index: -1;
+  }
+  
+  .btn-projeto:hover, .btn-projeto:focus {
+    color: #fff;
+  }
+  
+  .btn-projeto:hover:before, .btn-projeto:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  .btn-projeto:active {
+    transform: scale(0.9);
+  }
+
+  Footer {
+    height: 22vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 1.5rem;
+    background-color: #ffab14;
+  }
+
+  .redes-sociais {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .redes-sociais a {
+    color: #000;
+    font-size: 1.5rem;
+  }
+
+  .menu-footer {
+    display: flex;
+    gap: 1rem;
+  }
+  .menu-footer a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .copywriter {
+    font-size: 0.8rem;
+    padding-bottom: 5px;
+  }
+
+  @media (max-width: 1024px) {
+    .inicio-sobre {
+        font-size: 100px;
+    }
+
+    .sobre {
+        padding: 0 30px;
+    }
+
+    .chamada-projeto {
+        font-size: 14px;
+    }
+
+    .chamada-projeto span {
+        font-size: 22px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .inicio-sobre {
+        font-size: 80px;
+    }
+
+    .missao {
+        gap: 2rem;
+    }
+
+    .chamada {
+        height: 45vh;
+    }
+
+    .container-chamada div {
+        flex-direction: column;
+        width: 40%;
+    }
+
+    .chamada-projeto {
+        text-align: center;
+    }
+
+    .container-chamada div img {
+        padding-right: 0px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .sobre {
+        padding: 0;
+    }
+
+    .card {
+        width: 300px;
+        height: 500px;
+    }
+
+    .missao div img {
+        width: 300px;
+        height: 200px;
+    }
+
+    .missao div .title-card {
+        font-size: 19px;
+    }
+
+    .container-chamada {
+        flex-wrap: wrap;
+    }
+
+    .container-chamada div {
+        width: 95%;
+    }
+  }
