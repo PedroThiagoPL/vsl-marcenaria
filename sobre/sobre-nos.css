@@ -193,7 +193,7 @@ button.ativar .linha:nth-child(2) {
     line-height: 24px;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 3  0px;
+    padding-top: 30px;
     position: relative;
 }
 
@@ -431,6 +431,10 @@ button.ativar .linha:nth-child(2) {
   }
 
   @media (max-width: 500px) {
+    .inicio-sobre {
+        font-size: 60px;
+    }
+
     .sobre {
         padding: 0;
     }
